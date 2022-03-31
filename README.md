@@ -60,5 +60,3 @@ Enfin, lorsque vous voyez cette ligne dans Projet-DDS-BATTUT-CERIO-GUITTON.py :
 
 Travail réalisé par Alexis Cerio, Ines Guitton et Axel Battut.
 
-
-Traduit avec www.DeepL.com/Translator (version gratuite)
