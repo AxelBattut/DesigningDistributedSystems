@@ -1,61 +1,64 @@
-# Welcome to our Designing-Distributed-Systems Project.
+# Bienvenue à notre projet "Designing-Distributed-Systems".
 
-In this project you will be abe to use at the same time the MongoDB, Apache and Kafka Connect to retrieve data from the Binance API and do some queries on it.
-First we get our date via our file CreationTexte-BATTUT-CERIO-GUITTON.py and we have our data in our text file.
-Once the data retrieved we will indeed use Kafka to put it in a topic and use Kafka connect with mongodb to perform queries on the data.
+Dans ce projet, vous allez pouvoir utiliser en même temps MongoDB, Apache et Kafka Connect pour récupérer les données de l'API Binance et faire des requêtes sur celles-ci.
+Tout d'abord nous obtenons notre date via notre fichier CreationTexte-BATTUT-CERIO-GUITTON.py et nous avons nos données dans notre fichier texte.
+Une fois les données récupérées nous allons en effet utiliser Kafka pour les mettre dans un topic et utiliser Kafka connect avec mongodb pour effectuer des requêtes sur les données.
 
-The main code (Kafka connection and Mongodb queries) is located in **Projet-DDS-BATTUT-CERIO-GUITTON.py**. It's the only file you'll need to run (manipulations to know how to run below).
+Le code principal (connexion Kafka et requêtes Mongodb) est situé dans **Projet-DDS-BATTUT-CERIO-GUITTON.py**. C'est le seul fichier que vous aurez besoin d'exécuter (manipulations pour savoir comment exécuter ci-dessous).
 
-Be aware that you might need to wait a bit for the response of the api key when launching CreationTexte-BATTUT-CERIO-GUITTON.py
-# How to run
+Attention, il est possible que vous deviez attendre un peu la réponse de la clé api lors du lancement de CreationTexte-BATTUT-CERIO-GUITTON.py.
+## Comment exécuter
 
-## Initialization (in your terminal)
+## Initialisation (dans votre terminal)
 
-Launch MongoDB
+Lancez MongoDB
 
 mongo --host 127.0.0.1:27017
 
-Launch Zookeeper
+Lancer Zookeeper
 
 zookeeper-server-start.sh config/zookeeper.properties
 
-Launch Kafka
+Lancer Kafka
 
 kafka-server-start.sh config/server.properties
 
-And for the display of the data of the topic :
+Et pour l'affichage des données du topic :
 
-bin/kafka-console-consumer.sh --topic ProjetDDS --from-beginning --bootstrap-server localhost:9092
+bin/kafka-console-consumer.sh --topic ProjetDDS --from-beginning --bootstrap-server localhost:9092.
 
 
-## Our Topic and Database 
+## Notre sujet et notre base de données 
 
-For MongoDB :
+Pour MongoDB :
 
-Our database is called **"DDS"** and our collection is called **"myCollection"**.
+Notre base de données s'appelle **"DDS "** et notre collection s'appelle **"myCollection "**.
 
-For Kafka :
+Pour Kafka :
 
-Our Topic is called **"ProjetDDS"**.
+Notre Topic s'appelle **"ProjetDDS "**.
 
 ## Manipulation
 
-You can read the code and import the librairies we are using on the IDE of your choice. The import of the librairies is already done on our file. 
-You can also install the librairies if it's not already done (pip install name_of_your_library).
+Vous pouvez lire le code et importer les librairies que nous utilisons sur l'IDE de votre choix. L'importation des librairies est déjà faite dans notre fichier. 
+Vous pouvez également installer les librairies si ce n'est pas déjà fait (pip install nom_de_votre_bibliothèque).
 
 
-# Finally
+# Enfin
 
-You need to use three files, the jupyter notebook Projet-DDS-BATTUT-CERIO-GUITTON.py, fichier.txt (the file who contains the data of CreationTexte-BATTUT-CERIO-GUITTON.py) 
-and CreationTexte-BATTUT-CERIO-GUITTON.py (the file who produces the text file), you need to put this three files in the same directory (directory of your choice).
+Vous devez utiliser trois fichiers, le notebook jupyter Projet-DDS-BATTUT-CERIO-GUITTON.py, fichier.txt (le fichier qui contient les données de CreationTexte-BATTUT-CERIO-GUITTON.py) 
+et CreationTexte-BATTUT-CERIO-GUITTON.py (le fichier qui produit le fichier texte), vous devez placer ces trois fichiers dans le même répertoire (répertoire de votre choix).
 
-Finally, when you see this line in Projet-DDS-BATTUT-CERIO-GUITTON.py:  
+Enfin, lorsque vous voyez cette ligne dans Projet-DDS-BATTUT-CERIO-GUITTON.py :  
 
 ```py
-%run '/home/alexis/DDS/CreationTexte-BATTUT-CERIO-GUITTON.py'
+%run '/home/alexis/DDS/CreationTexte-BATTUT-CERIO-GUITTON.py'.
 ```
 
-**Change it by your full path (the path of CreationTexte-BATTUT-CERIO-GUITTON.py).**
+**Changez-le par votre chemin complet (le chemin de CreationTexte-BATTUT-CERIO-GUITTON.py).**
 
 
-Work done by Alexis Cerio, Ines Guitton and Axel Battut.
+Travail réalisé par Alexis Cerio, Ines Guitton et Axel Battut.
+
+
+Traduit avec www.DeepL.com/Translator (version gratuite)
